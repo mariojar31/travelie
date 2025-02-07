@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <!-- Nombre de la sección -->
+      <a class="navbar-brand" href="#" style="color: gray;">{{section}}</a>
+  
+      <!-- Botón de menú (para móviles) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Menú de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Barra de búsqueda -->
+        <form class="d-flex ms-auto w-50">
+          <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+        </form>
+  
+        <!-- Icono de notificaciones -->
+        <div class="d-flex align-items-center ms-3">
+          <button class="btn position-relative" (click)="viewNotification('Nueva notificación')">
+            <i class="bi bi-bell" style="font-size: 1.5rem; color: #2898ee;"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              3
+            </span>
+          </button>
+        </div>
+  
+        <!-- Menú de usuario -->
+        <div class="dropdown ms-3">
+          <button class="btn btn-link dropdown-toggle" type="button" id="userMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="{{ user.imageUrl }}" alt="User Avatar" class="rounded-circle" width="40" height="40" style="border: 2px solid #2898ee;">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuButton">
+            <li>
+              <a class="dropdown-item" href="#">
+                <strong>{{ user.name }}</strong>
+                <small class="d-block text-muted">{{ user.role }}</small>
+              </a>
+            </li>
+            <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

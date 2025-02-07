@@ -1,0 +1,61 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: fit-content;
+    min-width: 50px;
+    max-width: 240px;
+    background-color: #f8f9fa;
+    color: #2898ee;
+    transition: width 0.3s ease;
+    height: 100vh;
+    border-right: 1 solid #f8f9fa;
+  
+    mat-list-item {
+      padding: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+  
+    mat-list-item:hover {
+      background-color: #7fc0f1;
+    }
+  
+    mat-icon {
+      color:#2898ee
+    }
+    .logo{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 5px;
+        color: gray;
+        padding: 25px 5px;
+    }
+    .logo-img{
+        width: auto;
+
+    }
+    .section-name {
+      padding: 0 15px;
+      font-size: 16px;
+      font-weight: 500;
+      color: gray;
+    }
+  
+    button {
+      position: relative;
+      background: none;
+      color: white;
+      border: none;
+    }
+  }
+  
+  .sidebar[collapsed] {
+    width: 80px;
+  }
+  
+  .sidebar[collapsed] .section-name {
+    display: none;
+  }

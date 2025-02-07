@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+      <!-- Columna principal -->
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-body">
+            <app-metric-cards [metrics]="metrics"></app-metric-cards>
+            <app-chart-container></app-chart-container> 
+          </div>
+        </div>
+      </div>
+  
+      <!-- Columna secundaria -->
+      <div class="col-md-3 right-column">
+        <div class="card mb-3">
+          <div class="card-body">
+            <app-calendar></app-calendar>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card-body">
+            <app-news-cards></app-news-cards>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

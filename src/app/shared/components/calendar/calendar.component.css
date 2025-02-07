@@ -1,0 +1,35 @@
+.calendar-card {
+    max-width: 300px; /* Ancho máximo del calendario */
+    margin: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+  .custom-calendar {
+    width: 100%;
+    border-radius: 8px;
+  
+    .mat-calendar-header {
+      background-color: #2c3e50; /* Azul oscuro */
+      color: #ffffff;
+      border-radius: 8px 8px 0 0;
+    }
+  
+    .mat-calendar-body {
+      padding: 8px;
+  
+      .mat-calendar-body-cell {
+        border-radius: 50%;
+      }
+  
+      .mat-calendar-body-selected {
+        background-color: #3498db; /* Azul claro */
+        color: #ffffff;
+      }
+  
+      .mat-calendar-body-today {
+        border-color: #2c3e50; /* Azul oscuro */
+      }
+    }
+  }

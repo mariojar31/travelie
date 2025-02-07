@@ -1,0 +1,10 @@
+<mat-card class="calendar-card">
+<mat-card-content>
+    <mat-calendar
+    [startAt]="currentDate"
+    [selected]="currentDate"
+    (selectedChange)="onDateSelected($event)"
+    class="custom-calendar">
+    </mat-calendar>
+</mat-card-content>
+</mat-card>

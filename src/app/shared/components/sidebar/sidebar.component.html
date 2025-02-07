@@ -1,0 +1,21 @@
+<mat-nav-list class="sidebar">
+    <div class="logo">
+        <mat-icon class="logo-img">where_to_vote</mat-icon>
+        @if(!collapsed){
+            <h1>Travelie</h1>
+        }
+        <button mat-icon-button (click)="toggleSidebar()">
+            @if(collapsed){
+                <mat-icon>chevron_right</mat-icon>
+            }@else{
+                <mat-icon>chevron_left</mat-icon>
+            }
+        </button>
+    </div>
+
+    <mat-list-item *ngFor="let section of sections" [routerLink]="section.route">
+        <mat-icon>{{ section.icon }}</mat-icon>
+        <span *ngIf="!collapsed" class="section-name">{{ section.name }}</span>
+    </mat-list-item>
+</mat-nav-list>
+
