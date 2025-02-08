@@ -14,8 +14,21 @@
     color: #666;
   }
 
-  @media (max-width: 700px) {
-  .right-column{
-    display: none;
+  /* Estilos por defecto para pantallas grandes (por encima de 992px) */
+.right-column {
+    display: block; /* La columna es visible en pantallas grandes */
   }
-}
+  
+  /* Media Query para pantallas menores a 992px */
+  @media (max-width: 992px) {
+    .right-column {
+      display: none; /* Ocultar la columna secundaria en pantallas más pequeñas */
+    }
+  
+    /* Puedes hacer otros ajustes como la disposición de las tarjetas, etc. */
+    .col-md-9 {
+      width: 100%; /* Hacer que la columna principal ocupe el 100% del ancho */
+    }
+  }
+  
+ 

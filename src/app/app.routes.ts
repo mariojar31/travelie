@@ -10,5 +10,6 @@ export const routes: Routes = [
     { path: 'packages', component: PackagesComponent,data: { title: 'Packages' } },
     { path: 'bookings', component: BoockingsComponent,data: { title: 'Bookings' } },
     { path: 'calendar', component: CalendarComponent, data: { title: 'Calendar' } },
+    
     { path: '**', redirectTo: '/dashboard' }
 ];

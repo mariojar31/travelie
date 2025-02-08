@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container-fluid">
+    <div class="container-fluid bg-white" id="header">
       <!-- Nombre de la sección -->
       <a class="navbar-brand" href="#" style="color: gray;">{{section}}</a>
   
@@ -17,30 +17,51 @@
   
         <!-- Icono de notificaciones -->
         <div class="d-flex align-items-center ms-3">
-          <button class="btn position-relative" (click)="viewNotification('Nueva notificación')">
-            <i class="bi bi-bell" style="font-size: 1.5rem; color: #2898ee;"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              3
-            </span>
-          </button>
-        </div>
+            <!-- Botón de notificaciones -->
+            <div class="dropdown">
+              <button class="btn position-relative" (click)="toggleNotifications()">
+                <mat-icon class="icon-logo">notifications</mat-icon>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{ notifications.length }} <!-- Mostrar el número de notificaciones -->
+                </span>
+              </button>
+          
+              <!-- Dropdown de notificaciones -->
+              <ul class="dropdown-menu dropdown-menu-end" [class.show]="isNotificationsOpen">
+                <li *ngFor="let notification of notifications">
+                  <a class="dropdown-item" href="#" (click)="viewNotification(notification)">
+                    {{ notification }}
+                  </a>
+                </li>
+                <li *ngIf="notifications.length === 0">
+                  <a class="dropdown-item text-muted" href="#">No hay notificaciones</a>
+                </li>
+              </ul>
+            </div>
+          </div>
   
         <!-- Menú de usuario -->
         <div class="dropdown ms-3">
-          <button class="btn btn-link dropdown-toggle" type="button" id="userMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="{{ user.imageUrl }}" alt="User Avatar" class="rounded-circle" width="40" height="40" style="border: 2px solid #2898ee;">
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuButton">
-            <li>
-              <a class="dropdown-item" href="#">
-                <strong>{{ user.name }}</strong>
-                <small class="d-block text-muted">{{ user.role }}</small>
-              </a>
-            </li>
-            <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
-            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-          </ul>
-        </div>
+            <!-- Botón del menú -->
+            <button class="btn btn-link d-flex align-items-center p-0" type="button" (click)="toggleUserMenu()">
+              <!-- Imagen del usuario -->
+              <img [src]="user.imageUrl" alt="User Avatar" class="rounded" width="40" height="40" style="border: 2px solid #2898ee;">
+              <!-- Nombre del usuario -->
+              <span class="ms-2 text-dark" style="font-size: 0.9rem;">{{ user.name }}</span>
+            </button>
+          
+            <!-- Menú desplegable -->
+            <ul class="dropdown-menu dropdown-menu-end" [class.show]="isUserMenuOpen" aria-labelledby="userMenuButton">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <strong>{{ user.name }}</strong>
+                  <small class="d-block text-muted">{{ user.role }}</small>
+                </a>
+              </li>
+              <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+            </ul>
+          </div>
       </div>
     </div>
   </nav>

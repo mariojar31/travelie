@@ -1,21 +1,27 @@
-<mat-nav-list class="sidebar">
-    <div class="logo">
-        <mat-icon class="logo-img">where_to_vote</mat-icon>
-        @if(!collapsed){
-            <h1>Travelie</h1>
+<nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <div class="d-flex">
+        <mat-icon class="icon-logo">location_on</mat-icon>  
+        <h3>Travelie</h3>
+      </div>
+      <button type="button" id="sidebarCollapse" class="btn" (click)="toggleSidebar()">
+        @if(isCollapsed){
+            <mat-icon>chevron_right</mat-icon>
+        }@else{
+            <mat-icon>chevron_left</mat-icon>
         }
-        <button mat-icon-button (click)="toggleSidebar()">
-            @if(collapsed){
-                <mat-icon>chevron_right</mat-icon>
-            }@else{
-                <mat-icon>chevron_left</mat-icon>
-            }
-        </button>
+      </button>
     </div>
+    <div>
+        <ul class="list-unstyled" *ngFor="let section of sections">
+        <li >
+            <a [routerLink]="section.route">
+                <mat-icon class="icon-menu-sidebar">{{ section.icon }}</mat-icon>
+                <span *ngIf="!isCollapsed" class="section-name">{{ section.name }}</span>
+            </a>
+        </li>
+        </ul>
+    </div>
+  </nav>
 
-    <mat-list-item *ngFor="let section of sections" [routerLink]="section.route">
-        <mat-icon>{{ section.icon }}</mat-icon>
-        <span *ngIf="!collapsed" class="section-name">{{ section.name }}</span>
-    </mat-list-item>
-</mat-nav-list>
 

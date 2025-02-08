@@ -1,15 +1,11 @@
 /* Estilo personalizado para los íconos y bordes */
 .navbar-brand {
     font-weight: 600;
-    color: gray !important;
+    color: #616161 !important;
   }
   
   .navbar-toggler-icon {
     background-color: transparent;
-  }
-  
-  .dropdown-item {
-    color: gray;
   }
   
   .dropdown-item:hover {
@@ -32,4 +28,46 @@
   .dropdown-menu-end {
     right: 0 !important;
   }
+
+  #header{
+    background-color: transparent;
+  }
   
+
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 8px 16px;
+    color: #2c3e50;
+    text-decoration: none;
+    display: block;
+  
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+
+  .btn-link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: flex;
+    align-items: center;
+  }

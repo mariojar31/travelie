@@ -19,6 +19,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { NewsCardsComponent } from './components/news-cards/news-cards.component';
+import { PackageCardsComponent } from './components/package-cards/package-cards.component';
+import { TwoColumnLayoutComponent } from './components/two-column-layout/two-column-layout.component';
 
 
 
@@ -31,7 +33,9 @@ import { NewsCardsComponent } from './components/news-cards/news-cards.component
     RevenueOverviewChartComponent,
     TopDestinationsChartComponent,
     CalendarComponent,
-    NewsCardsComponent
+    NewsCardsComponent,
+    PackageCardsComponent,
+    TwoColumnLayoutComponent
   ],
   imports: [
     CommonModule,
@@ -55,7 +59,9 @@ import { NewsCardsComponent } from './components/news-cards/news-cards.component
     RevenueOverviewChartComponent,
     TopDestinationsChartComponent,
     CalendarComponent,
-    NewsCardsComponent
+    NewsCardsComponent,
+    PackageCardsComponent,
+    TwoColumnLayoutComponent
   ]
 })
 export class SharedModule { }

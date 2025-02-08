@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   standalone:false
 })
 export class CalendarComponent {
-  currentDate = new Date(); // Fecha actual
+  currentDate = new Date();
 
-  // Método para manejar la selección de fechas
+
   onDateSelected(date: Date): void {
     console.log('Fecha seleccionada:', date);
   }

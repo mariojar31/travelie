@@ -1,0 +1,21 @@
+<div class="package-cards">
+    <div class="row">
+      <!-- Renderizar tarjetas dinámicamente -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let package of packages">
+        <div class="card">
+          <!-- Imagen del destino -->
+          <div class="card-image">
+            <img [src]="package.image" alt="{{ package.destination }}" class="card-img-top">
+            <!-- Nombre del destino sobre la imagen -->
+            <div class="destination-name">
+              {{ package.destination }}
+            </div>
+          </div>
+          <!-- Nombre del paquete -->
+          <div class="card-body">
+            <h5 class="card-title">{{ package.name }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
