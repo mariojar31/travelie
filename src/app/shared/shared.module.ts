@@ -21,7 +21,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { NewsCardsComponent } from './components/news-cards/news-cards.component';
 import { PackageCardsComponent } from './components/package-cards/package-cards.component';
 import { TwoColumnLayoutComponent } from './components/two-column-layout/two-column-layout.component';
-
+import { UserMessagesComponent } from './components/user-messages/user-messages.component';
 
 
 @NgModule({
@@ -35,7 +35,8 @@ import { TwoColumnLayoutComponent } from './components/two-column-layout/two-col
     CalendarComponent,
     NewsCardsComponent,
     PackageCardsComponent,
-    TwoColumnLayoutComponent
+    TwoColumnLayoutComponent,
+    UserMessagesComponent
   ],
   imports: [
     CommonModule,
@@ -61,7 +62,8 @@ import { TwoColumnLayoutComponent } from './components/two-column-layout/two-col
     CalendarComponent,
     NewsCardsComponent,
     PackageCardsComponent,
-    TwoColumnLayoutComponent
+    TwoColumnLayoutComponent,
+    UserMessagesComponent
   ]
 })
 export class SharedModule { }

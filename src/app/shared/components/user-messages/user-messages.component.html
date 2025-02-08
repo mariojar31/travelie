@@ -1,0 +1,12 @@
+<div class="messages-container">
+    <div *ngFor="let message of messages" class="message-card">
+      <div class="user-info">
+        <img [src]="message.userImage" alt="User Image" class="user-image" />
+        <span class="user-name">{{ message.userName }}</span>
+      </div>
+      <div class="message-content">
+        <p>{{ message.message }}</p>
+        <small class="message-date">{{ message.date }}</small>
+      </div>
+    </div>
+  </div>
