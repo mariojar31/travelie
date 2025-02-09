@@ -1,20 +1,44 @@
 <div class="news-cards">
+  <div class="upcoming-trips-header">
+    <span class="header-title">
+      Upcoming Trips
+    </span>
+    <div class="icon-add">
+      <mat-icon>add</mat-icon>
+    </div>
+  </div>
     <div class="row">
-      <!-- Tarjeta 1 -->
       <div class="col-12 mb-3" *ngFor="let plan of plans">
-        <div class="card news-card">
-          <div class="row g-0">
-            <!-- Miniatura del destino -->
-            <div class="col-4">
-              <img [src]="plan.image" class="img-fluid rounded-start" alt="Destino">
-            </div>
-            <!-- Nombre del destino y plan -->
-            <div class="col-8">
-              <div class="card-body">
-                <h6 class="card-title">{{ plan.destination }}</h6>
-                <p class="card-text">{{ plan.planName }}</p>
+        <div class="card-upcoming-travel">
+          <div class="card-container">
+            <div class="image-container">
+              <img [src]="plan.image" alt="">
+            </div>  
+            <div class="upcoming-card-body">
+              <span class="plan-name">
+                {{plan.planName}}
+              </span>
+              <span class="destination">
+                {{plan.destination}}
+              </span>
+              <div class="booked-section">
+                <div class="booked-pictures">
+                  <img src="https://st2.depositphotos.com/1075946/5334/i/950/depositphotos_53346995-stock-photo-handsome-40-year-old-man.jpg" alt="">
+                  <img src="https://media.istockphoto.com/id/1386479313/es/foto/feliz-mujer-de-negocios-afroamericana-millennial-posando-aislada-en-blanco.jpg?s=612x612&w=0&k=20&c=JP0NBxlxG2-bdpTRPlTXBbX13zkNj0mR5g1KoOdbtO4=" alt="">
+                  <img src="https://wallpapers.com/images/featured/imagenes-de-perfil-de-mujeres-8vxjyailtsus6skr.jpg" alt="">
+                  <span class="plus-users">{{plan.booked}}</span>
+                </div>
+                
+                <div class="date">
+                  <mat-icon style="font-size: 0.6rem; width: 15px;">calendar_today</mat-icon>
+                  <span class="date-string">
+                    {{plan.date}}
+                  </span>
+                </div>
+                
               </div>
             </div>
+
           </div>
         </div>
       </div>

@@ -1,67 +1,80 @@
 .messages-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 16px;
-    height: 100%;
+    flex-direction: column;
+    padding: 5px;
     width: 100%;
-    box-sizing: border-box;
+    border-width: 1px;
+    border-radius: 9px;
+    border-color: hsla(0, 2%, 59%, 0.369);
+    border-style: solid;
   }
-  
-  .message-card {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 16px;
-    flex: 1 1 calc(33.333% - 32px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  
-    &:hover {
-      transform: translateY(-4px);
-    }
+
+  .card-content-msg:hover{
+    background-color: #b7dfff28;
+    border-radius: 6px;
   }
-  
-  .user-info {
+
+  .card-header{
     display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+  }
+
+  .user-img{
+    border-radius: 15px;
+    padding: 0px;
+  }
+
+  .message-card-body  {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .preview{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
-  
-    .user-image {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 12px;
-    }
-  
-    .user-name {
-      font-weight: 500;
-      color: #2c3e50;
-    }
+    max-height: 15px;
   }
-  
-  .message-content {
-    p {
-      margin: 0;
-      color: #333333;
-      font-size: 0.9rem;
-    }
-  
-    .message-date {
-      color: #777777;
-      font-size: 0.75rem;
-    }
+
+  .preview-msg{
+    font-size: 0.6rem;
   }
+  .username{
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .alert{
+    background-color: #348ABF;
+    padding: 1px;
+    margin: 1px;
+    height: 17px;
+    width: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-message{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .msg-time{
+    font-size: 0.5rem;
+    color: #348ABF;
+  }
+
+  .alert-number{
+    font-size: 0.6rem;
+    color: white;
+  }
+
+
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .message-card {
-      flex: 1 1 calc(50% - 32px);
-    }
-  }
   
-  @media (max-width: 480px) {
-    .message-card {
-      flex: 1 1 100%;
-    }
-  }

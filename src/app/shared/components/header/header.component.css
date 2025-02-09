@@ -1,7 +1,12 @@
 /* Estilo personalizado para los íconos y bordes */
 .navbar-brand {
-    font-weight: 600;
-    color: #616161 !important;
+    font-weight: 550;
+    color: #474E54 !important;
+    font-size: 1.3rem;
+  }
+
+  .icon-logo{
+    font-size: 20px;
   }
   
   .navbar-toggler-icon {
@@ -31,6 +36,7 @@
 
   #header{
     background-color: transparent;
+    padding: 14px 15px 5px 15px;
   }
   
 
@@ -70,4 +76,43 @@
     text-decoration: none; /* Elimina el subrayado del enlace */
     display: flex;
     align-items: center;
+  }
+
+  #navbarNav form input::placeholder{
+    font-size: smaller;
+    color: #aaaaaac4;
+  }
+
+  #navbarNav form input{
+    font-size: smaller;
+    color: #aaaaaa;
+    background-color: #f2f2f25d;
+    border-style: none;
+    margin-right: 0;
+  }
+
+  #navbarNav form{
+    width: 230px;
+  }
+
+  #notification-icon{
+    background-color: #f2f2f25d;
+    width: 31.98px;
+    height: 31.98px;
+    border-radius: 6px;
+  }
+
+  #dot{
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: rgb(218, 3, 3);
+  }
+
+  #down-icon{
+    color: #474E54; 
+    margin-left: 15px;
+    background-color: #f2f2f25d;
+    border-radius: 6px;
   }

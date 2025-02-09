@@ -12,9 +12,9 @@ export class HeaderComponent implements OnInit {
 
   // Datos del usuario (simulados)
   user = {
-    name: 'Juan Pérez',
-    role: 'Administrador',
-    imageUrl: 'https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp' // URL de la imagen del usuario
+    name: 'Ruben Herwitz',
+    role: 'Admin',
+    imageUrl: 'https://st.depositphotos.com/1008939/1316/i/450/depositphotos_13163725-stock-photo-young-man.jpg' // URL de la imagen del usuario
   };
 
   // Alternar el menú desplegable

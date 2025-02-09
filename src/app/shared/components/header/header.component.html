@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid bg-white" id="header">
       <!-- Nombre de la sección -->
       <a class="navbar-brand" href="#" style="color: gray;">{{section}}</a>
@@ -11,19 +11,19 @@
       <!-- Menú de navegación -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <!-- Barra de búsqueda -->
-        <form class="d-flex ms-auto w-50">
-          <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+        <form class="d-flex ms-auto">
+          <input class="form-control me-2" type="search" placeholder="🔍︎  Search anything" aria-label="Search">
         </form>
   
         <!-- Icono de notificaciones -->
-        <div class="d-flex align-items-center ms-3">
+        <div class="d-flex align-items-center ms-0">
             <!-- Botón de notificaciones -->
             <div class="dropdown">
-              <button class="btn position-relative" (click)="toggleNotifications()">
-                <mat-icon class="icon-logo">notifications</mat-icon>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {{ notifications.length }} <!-- Mostrar el número de notificaciones -->
-                </span>
+              <button class="btn position-relative p-0" (click)="toggleNotifications()">
+                <div id="notification-icon" class="d-flex justify-content-center align-items-center">
+                  <mat-icon id="dot" class="icon-logo">fiber_manual_record</mat-icon>
+                  <mat-icon class="icon-logo material-icons-outlined" style="color: #2c3e50; font-size: 1.5rem;">notifications</mat-icon>
+                </div>  
               </button>
           
               <!-- Dropdown de notificaciones -->
@@ -45,9 +45,15 @@
             <!-- Botón del menú -->
             <button class="btn btn-link d-flex align-items-center p-0" type="button" (click)="toggleUserMenu()">
               <!-- Imagen del usuario -->
-              <img [src]="user.imageUrl" alt="User Avatar" class="rounded" width="40" height="40" style="border: 2px solid #2898ee;">
+              <img [src]="user.imageUrl" alt="User Avatar" class="rounded" width="31.98" height="31.98" style="border-radius: 2px">
+              <div class="d-flex flex-column align-items-start">
               <!-- Nombre del usuario -->
-              <span class="ms-2 text-dark" style="font-size: 0.9rem;">{{ user.name }}</span>
+                <span class="ms-2 " style="font-size: 0.8rem; font-weight: 500; color: #474E54;">{{ user.name }}</span>
+                <span class="ms-2 " style="font-size: 0.6rem; color: #474E54;">{{ user.role }}</span>
+              </div>
+              <div class="d-flex justify-content-center align-items-center">
+                <mat-icon id="down-icon" class="material-icons-outlined" >keyboard_arrow_down</mat-icon>
+              </div>  
             </button>
           
             <!-- Menú desplegable -->

@@ -1,20 +1,26 @@
 .sidebar {
-    min-width: 200px;
-    max-width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 210px;
+    max-width: 210px;
     background-color: white; 
-    color: #616161;
+    color: #474E54;
     transition: all 0.3s ease;
+    border-right-width: 1px;
+    border-right-color: #9995955e;
+    border-right-style: groove;
+    height: 100%;
   }
   
   .sidebar-header {
-    padding: 20px;
-     
+    padding: 30px;
     text-align: center;
   }
   
   .sidebar-header h3 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
   .sidebar ul.components {
@@ -22,16 +28,19 @@
   }
   
   .sidebar ul li a {
-    padding: 10px 20px;
-    font-size: 1rem;
-    display: block;
-    color: #616161;
+    display: flex;
+    padding: 10px 10px;
+    padding-right: 15px;
+    margin: 0px 10px;
+    font-size: 0.9rem;
+    color: #878788;
     text-decoration: none;
+    align-items: center;
   }
   
   .sidebar ul li a:hover {
-    background-color: #3498db;
-    border-radius: 16px;
+    background-color: #41AEF2;
+    border-radius: 10px;
   }
   
   .sidebar ul li a i {
@@ -89,13 +98,33 @@
 
 .icon-menu-sidebar{
     margin: 0px 10px;
-    color: #616161;
+    color: #7c7c7c;
+    font-size: 1.3rem;
 }
 
 .section-name{
-    color: #616161;
+    color: #7c7c7c;
+}
+
+.sidebar ul li a:hover span,.sidebar ul li a:hover mat-icon{
+  color: white;
 }
 
 .icon-logo{
-    color: #3498db;
+    color: #41AEF2;
+}
+
+.message-badge{
+  margin-left: 12px;
+  padding: 3px 8px;
+  font-size: 12px;
+  background-color: #41AEF2;
+  border-radius: 5px;
+  color: white;
+}
+
+.active-section{
+  background-color: #41AEF2;
+  border-radius: 10px;
+  color: white;
 }

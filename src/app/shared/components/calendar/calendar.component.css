@@ -1,8 +1,7 @@
 .calendar-card {
     max-width: 300px; /* Ancho máximo del calendario */
-    margin: 16px;
+    margin: 0px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
   }
   
@@ -11,7 +10,7 @@
     border-radius: 8px;
   
     .mat-calendar-header {
-      background-color: #2c3e50; /* Azul oscuro */
+      background-color: #ffffff; /* Azul oscuro */
       color: #ffffff;
       border-radius: 8px 8px 0 0;
     }
@@ -24,12 +23,36 @@
       }
   
       .mat-calendar-body-selected {
-        background-color: #3498db; /* Azul claro */
+        background-color: #3498db; 
+        border-radius: 0px;
         color: #ffffff;
       }
   
       .mat-calendar-body-today {
-        border-color: #2c3e50; /* Azul oscuro */
+        border-color: #ffffff; /* Azul oscuro */
       }
     }
   }
+
+  .mat-mdc-card-content{
+    background-color: white;
+    border-style: none;
+    box-shadow: none;
+    padding: 0px;
+  }
+
+.mat-calendar-body-cell-content.mat-focus-indicator.mat-calendar-body-selected.mat-calendar-body-today{
+  background-color: red;
+}
+
+.mat-calendar-body-selected{
+  background-color: red;
+}
+
+.mat-calendar-body-label{
+  display: none;
+}
+
+.mat-mdc-button-touch-target{
+  width: 100px;
+}

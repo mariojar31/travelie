@@ -22,6 +22,8 @@ import { NewsCardsComponent } from './components/news-cards/news-cards.component
 import { PackageCardsComponent } from './components/package-cards/package-cards.component';
 import { TwoColumnLayoutComponent } from './components/two-column-layout/two-column-layout.component';
 import { UserMessagesComponent } from './components/user-messages/user-messages.component';
+import { TripsMetricsComponent } from './components/trips-metrics/trips-metrics.component';
+
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { UserMessagesComponent } from './components/user-messages/user-messages.
     NewsCardsComponent,
     PackageCardsComponent,
     TwoColumnLayoutComponent,
-    UserMessagesComponent
+    UserMessagesComponent,
+    TripsMetricsComponent
   ],
   imports: [
     CommonModule,
@@ -63,7 +66,8 @@ import { UserMessagesComponent } from './components/user-messages/user-messages.
     NewsCardsComponent,
     PackageCardsComponent,
     TwoColumnLayoutComponent,
-    UserMessagesComponent
+    UserMessagesComponent,
+    TripsMetricsComponent
   ]
 })
 export class SharedModule { }

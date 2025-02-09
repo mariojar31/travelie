@@ -1,7 +1,9 @@
 .card {
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: none;
+  }
+
+  .card-body{
+    padding: 0px;
   }
   
   .card-title {
@@ -15,10 +17,17 @@
   }
 
   /* Estilos por defecto para pantallas grandes (por encima de 992px) */
-.right-column {
-    display: block; /* La columna es visible en pantallas grandes */
+  .right-column {
+      display: block;
+      padding: 16px 10px 15px 0px;
+    }
+    
+  .right-column-content{
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: #9995955e;
+    border-style: groove;
   }
-  
   /* Media Query para pantallas menores a 992px */
   @media (max-width: 992px) {
     .right-column {

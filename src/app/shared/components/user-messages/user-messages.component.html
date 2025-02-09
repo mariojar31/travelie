@@ -1,12 +1,35 @@
 <div class="messages-container">
-    <div *ngFor="let message of messages" class="message-card">
-      <div class="user-info">
-        <img [src]="message.userImage" alt="User Image" class="user-image" />
-        <span class="user-name">{{ message.userName }}</span>
+    <div class="card-header">
+        <span style="font-weight: 500; color: #474E54;">Messages</span>
+        <a href="#"><mat-icon style="color: #474E54;">more_horiz</mat-icon></a>
+    </div>
+    <div class="h-100 d-flex justify-content-center" *ngFor="let message of messages">
+    <div class="row w-100 py-2 card-content-msg">   
+      <div class="user-img col-md-3">
+        <img width="30px" height="30px" style="border-radius: 15px;" [src]="message.userImage" alt="">
       </div>
-      <div class="message-content">
-        <p>{{ message.message }}</p>
-        <small class="message-date">{{ message.date }}</small>
+      <div class="message-card-body col-md-9">
+        <div class="header-message">
+          <div class="username">
+            {{message.userName}}
+          </div>
+          <span class="msg-time">
+            {{message.time}}
+          </span>
+        </div>
+        
+        <div class="preview w-100">
+          <span class="preview-msg">
+            {{message.message}}
+          </span>
+          <div class="alert">
+            <span class="alert-number p-0">
+              {{message.noRead}}
+            </span>
+          </div>
+        </div>
+        
       </div>
     </div>
+  </div>
   </div>

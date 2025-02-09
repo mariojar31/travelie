@@ -1,21 +1,34 @@
-<div class="package-cards">
-    <div class="row">
-      <!-- Renderizar tarjetas dinámicamente -->
-      <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let package of packages">
-        <div class="card">
-          <!-- Imagen del destino -->
-          <div class="card-image">
-            <img [src]="package.image" alt="{{ package.destination }}" class="card-img-top">
-            <!-- Nombre del destino sobre la imagen -->
-            <div class="destination-name">
-              {{ package.destination }}
-            </div>
-          </div>
-          <!-- Nombre del paquete -->
-          <div class="card-body">
-            <h5 class="card-title">{{ package.name }}</h5>
-          </div>
+<div class="w-100 my-3 packages-component">
+  <span style="font-weight: 500;">Travel Package</span>
+  <div class="group-buttons-header">
+    <span id="sort-by-text">Sort by:</span>
+    <span>
+      <div class="btn-group" style="font-size: 0.8rem; margin-right: 15px;">
+        <button class="btn bg-white btn-sm dropdown-toggle" style="font-size: 0.7rem; border-width: 1; border-color: #7c7c7c6e; border-style: solid;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Latest
+        </button>
+        <ul class="dropdown-menu">
+          ...
+        </ul>
+      </div>
+      <button class="btn btn-sm btn-white" style="font-size: 0.7rem; border-width: 1; border-color: #7c7c7c6e; border-style: solid;" type="button">View All</button>
+    </span>
+  </div>
+</div>
+<div class="package-cards" style="background-color: #b7dfff28; padding: 10px; border-radius: 16px;">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+    <div *ngFor="let package of packages">
+    <div class="col">
+      <div class="card h-100 p-2" style="border-style: none;">
+        <span style="position: absolute; top: 15px; left: 15px; font-size: 0.6rem; color: #348abfd8; padding: 2px 5px; background-color: white; border-radius: 5px;">{{package.name}}</span>
+        <img style="height: 180px; border-radius: 6px;" [src]="package.image" class="card-img-top" alt="...">
+        <div class="card-body p-1 pt-2">
+          <h5 class="card-title" style="font-size: 1rem; color: #474E54;">{{package.destination}}</h5>
+          <p class="card-text" style="font-size: 0.9rem; color: #7c7c7c;">{{package.description}}</p>
         </div>
       </div>
     </div>
   </div>
+  </div>    
+  
+</div>

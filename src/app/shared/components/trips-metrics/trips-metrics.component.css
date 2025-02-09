@@ -1,0 +1,59 @@
+.metric-icon{
+    color: #B7DEFF;
+    font-weight: 550;
+  }
+
+  .trips-metrics-container{
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+  }
+
+  .icon-cont{
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    height: 43px;
+    width: 43px;
+    background-color: #b7dfff28;
+  }
+
+  .metric-content{
+    width: 100px;
+  }
+
+  .metric-value {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2c3e50; 
+    margin: 0;
+  }
+
+  .value-label{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #2c3e50; 
+    margin: 0;
+  }
+  
+  .metric-label {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin: 0;
+  }
+
+  .label-icon{
+    font-size: 0.6rem;
+  }
+
+  @media (max-width: 768px) {
+
+  .trips-metrics-container{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+  }
+
+  
+  }

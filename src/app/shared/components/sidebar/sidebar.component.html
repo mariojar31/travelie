@@ -4,20 +4,13 @@
         <mat-icon class="icon-logo">location_on</mat-icon>  
         <h3>Travelie</h3>
       </div>
-      <button type="button" id="sidebarCollapse" class="btn" (click)="toggleSidebar()">
-        @if(isCollapsed){
-            <mat-icon>chevron_right</mat-icon>
-        }@else{
-            <mat-icon>chevron_left</mat-icon>
-        }
-      </button>
     </div>
     <div>
         <ul class="list-unstyled" *ngFor="let section of sections">
         <li >
-            <a [routerLink]="section.route">
-                <mat-icon class="icon-menu-sidebar">{{ section.icon }}</mat-icon>
-                <span *ngIf="!isCollapsed" class="section-name">{{ section.name }}</span>
+            <a [routerLink]="section.route" (click)="setActive(section.name)" [ngClass]="{'active-section':active==section.name}">
+                <mat-icon [ngClass]="{'active-section':active==section.name}" class="material-icons-outlined icon-menu-sidebar">{{ section.icon }}</mat-icon>
+                <span [ngClass]="{'active-section':active==section.name}" *ngIf="!isCollapsed" class="section-name">{{ section.name }} <span class="message-badge" *ngIf="section.alert">7</span></span>
             </a>
         </li>
         </ul>
