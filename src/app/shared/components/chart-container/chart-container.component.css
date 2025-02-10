@@ -1,10 +1,26 @@
 .chart-container {
     width: 100%;
     padding: 16px;
+    padding-bottom: 0px;
   }
-  .con-chart{
-    
-  }
+.revenue_chart{
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #9995955e;
+  height: 250px;
+  padding: 15px;
+}
+
+.destination-chart{
+  width: 100%;
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #9995955e;
+  height: 250px;
+  padding: 15px;
+}
 
   .chart-card {
     background-color: #ffffff;

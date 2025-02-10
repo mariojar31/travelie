@@ -1,22 +1,16 @@
 <div class="chart-container con-chart">
     <div class="row">
       <!-- Columna para la gráfica de líneas -->
-      <div class="col-md-7">
-        <div class="chart-card">
-          <div class="chart-placeholder">
-            <!-- Aquí irá la gráfica de líneas -->
-            <app-revenue-overview-chart></app-revenue-overview-chart>
-          </div>
+      <div class="col-md-7" >    
+        <div class="revenue-chart" style="border: 1px solid #9995955e; border-radius: 16px;">
+          <app-revenue-overview-chart></app-revenue-overview-chart>
         </div>
       </div>
   
       <!-- Columna para el gráfico circular -->
       <div class="col-md-5">
-        <div class="chart-card">
-          <div class="chart-placeholder">
-            <!-- Aquí irá el gráfico circular -->
-            <app-top-destinations-chart></app-top-destinations-chart>
-          </div>
+        <div class="destination-chart">
+          <app-top-destinations-chart></app-top-destinations-chart>
         </div>
       </div>
     </div>

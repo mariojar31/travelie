@@ -4,12 +4,11 @@ import { Chart, registerables } from 'chart.js';
 @Component({
   selector: 'app-revenue-overview-chart',
   templateUrl: './revenue-overview-chart.component.html',
-  styleUrls: ['./revenue-overview-chart.component.scss'],
+  styleUrls: ['./revenue-overview-chart.component.css'],
   standalone: false
 })
-export class RevenueOverviewChartComponent implements OnInit {
+export class RevenueOverviewChartComponent implements OnInit{
   public chart: any;
-  public currentPeriodicity: string = 'monthly'; // Periodicidad actual
 
   ngOnInit(): void {
     this.createChart();
@@ -19,103 +18,90 @@ export class RevenueOverviewChartComponent implements OnInit {
     Chart.register(...registerables);
 
     this.chart = new Chart('revenueChart', {
-      type: 'line', // Tipo de gráfica
-      data: this.getChartData(), // Datos iniciales
+      type: 'line', // Tipo de gráfica: línea
+      data: {
+        labels: ['Son', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], // Días de la semana
+        datasets: [
+          {
+            label: 'Ingresos (USD)', // Etiqueta de la serie
+            data: [380, 420, 280, 635, 420, 590, 430], // Datos de ingresos
+            borderColor: '#3498db', // Color de la línea
+            backgroundColor: 'rgba(52, 152, 219, 0.2)', // Color de relleno debajo de la línea
+            fill: false, // Rellenar el área debajo de la línea
+            tension: 0.4, // Hace que la línea sea suave (spline)
+            borderWidth: 2, // Grosor de la línea
+            pointBackgroundColor: '#3498db', // Color de los puntos
+            pointBorderColor: '#3498db', // Borde de los puntos
+            pointBorderWidth: 1, // Grosor del borde de los puntos
+            pointRadius: 1, // Tamaño de los puntos
+            pointHoverRadius: 5, // Tamaño de los puntos al pasar el mouse
+          }
+        ]
+      },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        scales: {
-          y: {
-            beginAtZero: false, // No comenzar desde cero
-            min: 10000, // Establecer el valor mínimo en 10,000
-            max: 30000, // Establecer el valor máximo en 30,000
-            grid: {
-              color: '#e0e0e0' // Gris claro para las líneas de la cuadrícula
-            },
-            ticks: {
-              stepSize: 5000, // Incremento de 5,000 en el eje Y
-              callback: (value) => `$${value}`, // Formatear los valores del eje Y con el símbolo de dólar
-              font: {
-                size: 10 // Tamaño de fuente pequeño
-              }
+        plugins: {
+          legend: {
+            display: false,
+            position: 'top',
+            labels: {
+              color: '#2c3e50' // Color del texto de la leyenda
             }
           },
-          x: {
-            grid: {
-              color: '#e0e0e0' // Gris claro para las líneas de la cuadrícula
-            },
-            ticks: {
-              font: {
-                size: 10 // Tamaño de fuente pequeño
+          tooltip: {
+            enabled: true,
+            backgroundColor: '#b7dfff', // Color de fondo del tooltip
+            titleColor: '#0b0b0b', // Color del título del tooltip
+            bodyColor: '#0b0b0b', // Color del cuerpo del tooltip
+            borderWidth: 0, // Grosor del borde del tooltip
+            position: 'average', // Posiciona el tooltip cerca del punto
+            yAlign: 'bottom',
+            callbacks: {
+              title: (context) => {
+                // Personaliza el título del tooltip
+                return `$${context[0].raw}`;
+              },
+              label: (context) => {
+                // Personaliza el cuerpo del tooltip
+                return `${context.label}`;
               }
             }
           }
         },
-        plugins: {
-          legend: {
+        scales: {
+          x: {
             display: true,
-            position: 'top',
-            labels: {
-              color: '#2c3e50', // Azul oscuro para el texto de la leyenda
-              font: {
-                size: 10 // Tamaño de fuente pequeño
-              }
+            title: {
+              display: true,
+              color: '#2c3e50',
+            },
+            grid: {
+              display: false // Oculta las líneas de la cuadrícula en el eje X
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: false,
+              color: '#2c3e50' // Color del título del eje Y
+            },
+            grid: {
+              display: true,
+            },
+            min: 0,
+            
+            ticks: {
+              stepSize: 200,
+              callback: (value: number | string) => {
+                // Agrega el prefijo "$" a los valores del eje Y
+                return `$${value}`;
+              },
+              
             }
           }
         }
       }
     });
-  }
-
-  // Cambiar la periodicidad
-  changePeriodicity(periodicity: string) {
-    this.currentPeriodicity = periodicity;
-    this.updateChartData();
-  }
-
-  // Obtener datos iniciales para la gráfica
-  getChartData() {
-    return {
-      labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'], // Eje X
-      datasets: [
-        {
-          label: 'Ingresos (USD)',
-          data: [12000, 15000, 18000, 14000, 16000, 19000, 21000, 20000, 22000, 23000, 24000, 25000], // Datos de ejemplo
-          borderColor: '#2c3e50', // Azul oscuro
-          backgroundColor: 'rgba(161, 202, 243, 0.1)', // Azul oscuro con transparencia
-          borderWidth: 2,
-          fill: true,
-          tension: 0.4,
-        }
-      ]
-    };
-  }
-
-  // Actualizar los datos de la gráfica según la periodicidad
-  updateChartData() {
-    let labels: string[];
-    let data: number[];
-
-    switch (this.currentPeriodicity) {
-      case 'weekly':
-        labels = ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4'];
-        data = [5000, 7000, 6000, 8000];
-        break;
-      case 'monthly':
-        labels = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-        data = [12000, 15000, 18000, 14000, 16000, 19000, 21000, 20000, 22000, 23000, 24000, 25000];
-        break;
-      case 'yearly':
-        labels = ['2021', '2022', '2023'];
-        data = [150000, 180000, 200000];
-        break;
-      default:
-        labels = [];
-        data = [];
-    }
-
-    this.chart.data.labels = labels;
-    this.chart.data.datasets[0].data = data;
-    this.chart.update(); 
   }
 }

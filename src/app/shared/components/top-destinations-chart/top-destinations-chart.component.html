@@ -1,3 +1,64 @@
-<div class="chart-wrapper">
-    <canvas height="160px" id="topDestinationsChart"></canvas>
+<div class="card-chart-container">
+    <div class="chart-header">
+        <span class="chart-title">
+            Top Destinations
+        </span>
+        <div class="btn-group">
+            <button style="background-color: #43aaff;" id="period-button" class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              This Month
+            </button>
+            <ul class="dropdown-menu">
+              <li>Last 3 Month</li>
+              <li>Last 6 Month</li>
+              <li>This Year</li>
+            </ul>
+        </div>
+    </div>
+    <div class="chart-contenedor">
+        <div class="col-6">
+            <canvas height="160px"  id="topDestinationsChart"></canvas>
+        </div>
+        <div class="labels col-6" style="font-size: 0.5rem;">
+            
+            <div class="cont-label">
+                <span class="label-square"><svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="10" height="10" fill="#3482c4" />
+                  </svg></span>
+                <div class="item-label">
+                    <span class="label-title">Tokio, Japan (35%)</span>
+                    <span>2,468 Participants</span>
+                </div>
+            </div>
+            <div class="cont-label">
+                <span class="label-square"><svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="10" height="10" fill="#43aaff" />
+                  </svg></span>
+                <div class="item-label">
+                    <span class="label-title">Sidney, Australia (28%)</span>
+                    <span>2,468 Participants</span>
+                </div>
+            </div>
+            
+            <div class="cont-label">
+                <span class="label-square"><svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="10" height="10" fill="#b7e1ff" />
+                  </svg></span>
+                <div class="item-label">
+                    <span class="label-title">Paris, France (22%)</span>
+                    <span>2,468 Participants</span>
+                </div>
+            </div>
+            
+            <div class="cont-label">
+                <span class="label-square"><svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="10" height="10" fill="#e8f5fe" />
+                  </svg></span>
+                <div class="item-label">
+                    <span class="label-title">Venice, Italy (15%)</span>
+                    <span>2,468 Participants</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </div>

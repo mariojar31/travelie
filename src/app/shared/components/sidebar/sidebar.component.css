@@ -39,7 +39,7 @@
   }
   
   .sidebar ul li a:hover {
-    background-color: #41AEF2;
+    background-color: #42aaff;
     border-radius: 10px;
   }
   
@@ -111,7 +111,7 @@
 }
 
 .icon-logo{
-    color: #41AEF2;
+    color: #42aaff;
 }
 
 .message-badge{

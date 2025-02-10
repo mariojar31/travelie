@@ -18,32 +18,33 @@ export class TopDestinationsChartComponent implements OnInit {
     Chart.register(...registerables);
 
     this.chart = new Chart('topDestinationsChart', {
-      type: 'doughnut', // Tipo de gráfica
+      type: 'doughnut', 
       data: {
-        labels: ['París', 'Nueva York', 'Tokio', 'Londres', 'Dubái'], // Destinos
+        labels: ['Tokio, Japan', 'Sidney, Australia', 'Paris, France', 'Venice, Italy'], 
         datasets: [
           {
             label: 'Reservas',
-            data: [300, 250, 200, 150, 100], // Datos de ejemplo
+            data: [35, 28, 22, 15], 
             backgroundColor: [
-              '#2c3e50', // Azul oscuro
-              '#3498db', // Azul claro
-              '#7f8c8d', // Gris
-              '#bdc3c7', // Gris claro
-              '#e0e0e0' // Gris muy claro
+              '#3083c5', 
+              '#42aafe', 
+              '#7f8c8d', 
+              '#b9dffc', 
+              '#e7f4fe' 
             ],
-            borderColor: '#ffffff', // Borde blanco
-            borderWidth: 2
+            borderColor: '#ffffff', 
+            borderWidth: 0
           }
         ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        cutout: '70%',
         plugins: {
           legend: {
-            display: true,
-            position: 'bottom',
+            display: false,
+            position: 'right',
             labels: {
               color: '#2c3e50' // Azul oscuro para el texto de la leyenda
             }

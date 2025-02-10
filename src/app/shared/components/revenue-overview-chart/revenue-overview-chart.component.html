@@ -1,20 +1,17 @@
-<div class="chart-container">
-    <!-- Dropdown de periodicidad -->
-    <div class="periodicity-control">
-      <div class="dropdown">
-        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="periodicityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          {{ currentPeriodicity | titlecase }}
+<div class="chart-header">
+    <span class="chart-title">
+        Revenue Overview
+    </span>
+    <div class="btn-group">
+        <button style="background-color: #43aaff;" id="period-button" class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Weekly
         </button>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="periodicityDropdown">
-          <li><a class="dropdown-item" href="#" (click)="changePeriodicity('weekly')">Semanal</a></li>
-          <li><a class="dropdown-item" href="#" (click)="changePeriodicity('monthly')">Mensual</a></li>
-          <li><a class="dropdown-item" href="#" (click)="changePeriodicity('yearly')">Anual</a></li>
+        <ul class="dropdown-menu">
+          ...
         </ul>
-      </div>
     </div>
-  
-    <!-- Contenedor de la gráfica -->
-    <div class="chart-wrapper">
-      <canvas height="160px" id="revenueChart"></canvas>
-    </div>
-  </div>
+</div>
+<div style="max-width: 450px;
+  margin: 0 auto; height: 200px;">
+    <canvas id="revenueChart"></canvas>
+</div>

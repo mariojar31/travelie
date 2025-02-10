@@ -1,0 +1,118 @@
+/* Estilos para el contenedor del calendario */
+.calendar-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el calendario */
+  .calendar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* Estilos para el encabezado del calendario */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px;
+    background-color: #ffffff;
+    height: 50px;
+  }
+  
+  .header button {
+    background: #f2f2f25d;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0px 10px;
+  }
+  
+  .header h2 {
+    margin: 0;
+    font-size: clamp(0.6rem, 2vw, 0.9rem); /* Tamaño de texto responsive */
+    font-weight: bold;
+  }
+  
+  /* Estilos para la tabla del calendario */
+  table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    flex-grow: 1;
+  }
+  
+  th, td {
+    text-align: center;
+    font-size: clamp(0.6rem, 2vw, 0.8rem); /* Tamaño de texto responsive */
+    padding: 5px 0; /* Eliminar padding */
+  }
+  
+  th {
+    background-color: #ffffff;
+    font-weight: 400;
+    color: #ccccccbd;
+  }
+  
+  td {
+    cursor: pointer;
+  }
+  
+  td.disabled {
+    background-color: #ffffff;
+    color: #ccc;
+    cursor: default;
+  }
+  
+  /* Hacer que las celdas sean cuadradas y ocupen el espacio disponible */
+  td {
+    width: calc(100% / 7);
+    height: calc(100% / 6);
+    box-sizing: border-box;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 600px) {
+    .header h2 {
+      font-size: clamp(0.5rem, 3vw, 0.8rem);
+    }
+  
+    th, td {
+      font-size: clamp(0.6rem, 3vw, 0.8rem);
+    }
+  }
+
+  /* Estilos para fechas seleccionadas y en rango */
+/* Estilos para fechas seleccionadas (inicial y final) */
+.selected {
+    background-color: #42aaff !important;
+    color: white !important;
+  }
+  
+  /* Estilos para fechas en rango */
+  .in-range {
+    background-color: #e8f5fe !important;
+  }
+  
+  /* Estilos específicos para el día inicial del rango */
+  .selected.start-date {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  
+  /* Estilos específicos para el día final del rango */
+  .selected.end-date {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }

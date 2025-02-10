@@ -23,6 +23,7 @@ import { PackageCardsComponent } from './components/package-cards/package-cards.
 import { TwoColumnLayoutComponent } from './components/two-column-layout/two-column-layout.component';
 import { UserMessagesComponent } from './components/user-messages/user-messages.component';
 import { TripsMetricsComponent } from './components/trips-metrics/trips-metrics.component';
+import { CustomCalendarComponent } from './components/custom-calendar/custom-calendar.component';
 
 
 
@@ -39,7 +40,8 @@ import { TripsMetricsComponent } from './components/trips-metrics/trips-metrics.
     PackageCardsComponent,
     TwoColumnLayoutComponent,
     UserMessagesComponent,
-    TripsMetricsComponent
+    TripsMetricsComponent,
+    CustomCalendarComponent
   ],
   imports: [
     CommonModule,
@@ -67,7 +69,8 @@ import { TripsMetricsComponent } from './components/trips-metrics/trips-metrics.
     PackageCardsComponent,
     TwoColumnLayoutComponent,
     UserMessagesComponent,
-    TripsMetricsComponent
+    TripsMetricsComponent,
+    CustomCalendarComponent
   ]
 })
 export class SharedModule { }

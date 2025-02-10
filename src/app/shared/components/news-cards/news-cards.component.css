@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
+    border-top: 1px solid #9995955e;
   }
   
   .icon-add{
@@ -25,7 +26,7 @@
 
   .card-upcoming-travel:hover{
     border-radius: 12px;
-    background-color: #b7dfff28;
+    background-color: #e8f5fee5;
     width: 100%;
   }
 

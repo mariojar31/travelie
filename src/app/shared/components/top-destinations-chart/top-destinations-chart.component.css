@@ -1,0 +1,38 @@
+.chart-contenedor{
+    display: flex;
+    align-items: center;
+}
+
+.chart-header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+  }
+  
+  .chart-title{
+    font-weight: 500;
+  }
+  
+  #period-button{
+    padding: 3px 5px;
+    font-size: 0.7rem;
+  }
+
+  .label-title{
+    font-size: 0.65rem;
+    font-weight: 500;
+  }
+
+  .item-label{
+    display: flex;
+    flex-direction: column;
+  }
+
+.cont-label{
+    display: flex;
+    margin: 10px 0px
+}
+
+.label-square{
+    margin: 0px 5px;
+}
