@@ -37,6 +37,14 @@ export class NewsCardsComponent {
       image: 'https://www.visittheusa.mx/sites/default/files/styles/hero_l/public/images/hero_media_image/2016-12/NYC-Underrated-Parks-HERO.jpg?h=7abc3870&itok=Q4bHIuv4',
       date: '20-25 July',
       booked: '+22'
+    },
+    {
+      destination: "Cape Town, South Africa",
+      planName: "Safari Adventure",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDG2D-NcswHqsiENuathCvkdBRZnhrNKAXZw&s",
+      date: "5-10 October",
+      booked: "+18"
     }
+    
   ];
 }

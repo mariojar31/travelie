@@ -19,7 +19,7 @@
   /* Estilos por defecto para pantallas grandes (por encima de 992px) */
   .right-column {
       display: block;
-      padding: 16px 10px 15px 0px;
+      padding: 0px 10px 15px 0px;
     }
     
   .right-column-content{

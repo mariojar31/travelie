@@ -30,11 +30,13 @@ export class RevenueOverviewChartComponent implements OnInit{
             fill: false, // Rellenar el área debajo de la línea
             tension: 0.4, // Hace que la línea sea suave (spline)
             borderWidth: 2, // Grosor de la línea
-            pointBackgroundColor: '#3498db', // Color de los puntos
-            pointBorderColor: '#3498db', // Borde de los puntos
+            pointBackgroundColor: '#00000000', // Color de los puntos
+            pointBorderColor: '#00000000', // Borde de los puntos
             pointBorderWidth: 1, // Grosor del borde de los puntos
-            pointRadius: 1, // Tamaño de los puntos
+            pointRadius: 3, // Tamaño de los puntos
             pointHoverRadius: 5, // Tamaño de los puntos al pasar el mouse
+            pointHoverBorderColor: '#42aaff',
+            pointHoverBackgroundColor: '#42aaff'
           }
         ]
       },
@@ -51,12 +53,13 @@ export class RevenueOverviewChartComponent implements OnInit{
           },
           tooltip: {
             enabled: true,
-            backgroundColor: '#b7dfff', // Color de fondo del tooltip
+            backgroundColor: '#e8f5fe', // Color de fondo del tooltip
             titleColor: '#0b0b0b', // Color del título del tooltip
             bodyColor: '#0b0b0b', // Color del cuerpo del tooltip
             borderWidth: 0, // Grosor del borde del tooltip
             position: 'average', // Posiciona el tooltip cerca del punto
             yAlign: 'bottom',
+            caretPadding: 10,
             callbacks: {
               title: (context) => {
                 // Personaliza el título del tooltip

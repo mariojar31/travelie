@@ -3,6 +3,10 @@
     align-items: center;
 }
 
+.card-chart-container{
+  height: 200px;
+}
+
 .chart-header{
     display: flex;
     justify-content: space-between;

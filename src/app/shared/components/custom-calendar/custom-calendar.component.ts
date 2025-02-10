@@ -13,6 +13,11 @@ export class CustomCalendarComponent implements OnInit{
   currentYear: number=2025;
   selectedStartDate: Date | null = null;
   selectedEndDate: Date | null = null;
+  bookeedDate:Array<Date>=[new Date('2025-02-10'),new Date('2028-07-03')]
+
+  isBooked(date: Date): boolean {
+    return this.bookeedDate.some(bookedDate => bookedDate && bookedDate.getTime() === date.getTime());
+  }
 
   ngOnInit(): void {
     const date = new Date();

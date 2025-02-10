@@ -32,6 +32,7 @@
                 [class.in-range]="day !== null && isInRange(day) && !isSelected(day)"
                 [class.start-date]="day !== null && isStartDate(day)"
                 [class.end-date]="day !== null && isEndDate(day)"
+                [class.booked]="day !== null && isBooked(day)"
                 (click)="day !== null && selectDate(day)">
               {{ day !== null ? day.getDate() : '' }}
             </td>

@@ -26,11 +26,11 @@ export class TopDestinationsChartComponent implements OnInit {
             label: 'Reservas',
             data: [35, 28, 22, 15], 
             backgroundColor: [
-              '#3083c5', 
-              '#42aafe', 
-              '#7f8c8d', 
-              '#b9dffc', 
-              '#e7f4fe' 
+              '#3482c4', 
+              '#43aaff', 
+              '#b7e1ff', 
+              '#e8f5fe', 
+            
             ],
             borderColor: '#ffffff', 
             borderWidth: 0
@@ -38,6 +38,7 @@ export class TopDestinationsChartComponent implements OnInit {
         ]
       },
       options: {
+        rotation: 180,
         responsive: true,
         maintainAspectRatio: false,
         cutout: '70%',

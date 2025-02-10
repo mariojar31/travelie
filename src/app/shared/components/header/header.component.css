@@ -86,7 +86,7 @@
   #navbarNav form input{
     font-size: smaller;
     color: #aaaaaa;
-    background-color: #f2f2f25d;
+    background-color: #f2f2f28c;
     border-style: none;
     margin-right: 0;
   }
@@ -96,7 +96,7 @@
   }
 
   #notification-icon{
-    background-color: #f2f2f25d;
+    background-color: #f2f2f29d;
     width: 31.98px;
     height: 31.98px;
     border-radius: 6px;
@@ -113,6 +113,6 @@
   #down-icon{
     color: #474E54; 
     margin-left: 15px;
-    background-color: #f2f2f25d;
+    background-color: #f2f2f28c;
     border-radius: 6px;
   }
